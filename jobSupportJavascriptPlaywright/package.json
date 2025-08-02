@@ -1,0 +1,33 @@
+{
+    "name": "cucumber-playwright-tests",
+    "version": "1.0.0",
+    "description": "Cucumber tests with Playwright for login functionality",
+    "main": "index.js",
+    "scripts": {
+        "test": "cucumber-js",
+        "test:headless": "cucumber-js --world-parameters '{\"headless\": true}'",
+        "test:headed": "cucumber-js --world-parameters '{\"headless\": false}'",
+        "test:headed:slow": "cucumber-js --world-parameters '{\"headless\": false}' --parallel 1",
+        "test:chrome": "cucumber-js --world-parameters '{\"headless\": false, \"browserType\": \"chromium\"}'",
+        "test:chrome:debug": "cucumber-js --world-parameters '{\"headless\": false, \"browserType\": \"chromium\"}' --parallel 1",
+        "test:firefox": "cucumber-js --world-parameters '{\"headless\": false, \"browserType\": \"firefox\"}'",
+        "test:webkit": "cucumber-js --world-parameters '{\"headless\": false, \"browserType\": \"webkit\"}'",
+        "report": "cucumber-js --format html:cucumber-report.html"
+    },
+    "keywords": [
+        "cucumber",
+        "playwright",
+        "testing",
+        "javascript"
+    ],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@cucumber/cucumber": "^10.0.1",
+        "@playwright/test": "^1.40.0",
+        "playwright": "^1.40.0"
+    },
+    "dependencies": {
+        "chai": "^4.3.10"
+    }
+}
